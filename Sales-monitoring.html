@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Sales Monitoring - Lechon Shop</title>
+    <style>
+        :root {
+            --primary: #e56e1e;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-right: 1px solid #ddd;
+        }
+        .sidebar h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        .sidebar a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            padding: 8px 0;
+            border-radius: 4px;
+        }
+        .sidebar a:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+        header {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        section {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        h2 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 6px;
+            text-align: left;
+        }
+        th {
+            background-color: #f5f5f5;
+        }
+        .view-more {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .view-more:hover {
+            background-color: #d55a1a;
+        }
+        .hidden {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+            }
+        }
+    </style>
+</head>
+<body>
+    <aside class="sidebar">
+        <h3>Admin Panel</h3>
+        <a href="wala pani.html">Transaction Monitoring</a>
+        <a href="wala pani.html">Sales Monitoring</a>
+    </aside>
+    
+    <div class="main-content">
+        <header>
+            <h1>Sales Monitoring</h1>
+            <p>View reports and track trends.</p>
+        </header>
+        
+        <section>
+            <h2>Sales Reports</h2>
+            <p>Track income trends with daily, weekly, and monthly data (sample).</p>
+            
+            <h3>Daily Sales (Last 7 Days)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Total Sales (₱)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2023-10-01</td>
+                        <td>12000</td>
+                    </tr>
+                    <tr>
+                        <td>2023-10-02</td>
+                        <td>8500</td>
+                    </tr>
+                    <tr>
+                        <td>2023-10-03</td>
+                        <td>15000</td>
+                    </tr>
+                    <tr class="hidden extra-daily">
+                        <td>2023-10-04</td>
+                        <td>11000</td>
+                    </tr>
+                    <tr class="hidden extra-daily">
+                        <td>2023-10-05</td>
+                        <td>9500</td>
+                    </tr>
+                    <tr class="hidden extra-daily">
+                        <td>2023-10-06</td>
+                        <td>13000</td>
+                    </tr>
+                    <tr class="hidden extra-daily">
+                        <td>2023-10-07</td>
+                        <td>14000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="view-more" onclick="toggleView('extra-daily')">View More Daily Sales</button>
+            
+            <h3>Weekly Sales (Last 4 Weeks)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Week</th>
+                        <th>Total Sales (₱)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Week 1</td>
+                        <td>50000</td>
+                    </tr>
+                    <tr>
+                        <td>Week 2</td>
+                        <td>45000</td>
+                    </tr>
+                    <tr class="hidden extra-weekly">
+                        <td>Week 3</td>
+                        <td>52000</td>
+                    </tr>
+                    <tr class="hidden extra-weekly">
+                        <td>Week 4</td>
+                        <td>48000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="view-more" onclick="toggleView('extra-weekly')">View More Weekly Sales</button>
+            
+            <h3>Monthly Sales (Last 3 Months)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>Total Sales (₱)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>July 2023</td>
+                        <td>200000</td>
+                    </tr>
+                    <tr>
+                        <td>August 2023</td>
+                        <td>180000</td>
+                    </tr>
+                    <tr class="hidden extra-monthly">
+                        <td>September 2023</td>
+                        <td>220000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="view-more" onclick="toggleView('extra-monthly')">View More Monthly Sales</button>
+        </section>
+        
+        <section>
+            <h2>Peak and Low Sales Days</h2>
+            <p>Monitor to plan operations better (sample data).</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day Type</th>
+                        <th>Days</th>
+                        <th>Average Sales (₱)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Peak Days</td>
+                        <td>Saturdays, Sundays</td>
+                        <td>20000</td>
+                    </tr>
+                    <tr>
+                        <td>Low Days</td>
+                        <td>Mondays, Tuesdays</td>
+                        <td>5000</td>
+                    </tr>
+                    <tr class="hidden extra-peak-low">
+                        <td>Peak Days</td>
+                        <td>Holidays</td>
+                        <td>25000</td>
+                    </tr>
+                    <tr class="hidden extra-peak-low">
+                        <td>Low Days</td>
+                        <td>Wednesdays</td>
+                        <td>4000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="view-more" onclick="toggleView('extra-peak-low')">View More Peak/Low Days</button>
+        </section>
+    </div>
+
+    <script>
+        function toggleView(className) {
+            const elements = document.querySelectorAll('.' + className);
+            elements.forEach(el => {
+                el.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
