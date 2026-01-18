@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Customer Visit</title>
+    <style>
+        :root {
+            --primary: #e56e1e;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        section {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        h2 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        /* CARDS */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+        }
+        .card {
+            background: white;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 10px;
+        }
+        .card-content h4 {
+            margin-bottom: 6px;
+        }
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+        }
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .contact-info div {
+            flex: 1;
+            min-width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome hahahaha</h1>
+        <p>KAMBAL ❤️ LOYLOY</p>
+    </header>
+    
+    <section id="location">
+        <h2>Shop Location</h2>
+        <p>Address: 123 bulua haha, CdoC, Philippines</p>
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.926508258367!2d124.61299351164962!3d8.506516896911224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32fff3909d3a1bef%3A0x6730ddf83f4eb9b0!2sCandia%20Sign%20Ads!5e0!3m2!1sen!2sph!4v1768719314256!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <section id="menu">
+        <h2 class="section-title">Our Menu - Lechon Options</h2>
+        <div class="card-grid">
+            <div class="card">
+                <img src="whole-lechon.jpg" alt="Whole Lechon">
+                <div class="card-content">
+                    <h4>WHOLE LECHON</h4>
+                    <p>₱6000 - 18 to 20 kls</p>
+                    <p>₱7000 - 21 to 23 kls</p>
+                    <p>₱8000 - 24 to 26 kls</p>
+                    <p>₱9000 - 27 to 30 kls</p>
+                    <p>₱10000 - 31 to 35 kls</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="lechon-bellyha.jpg" alt="Lechon Belly">
+                <div class="card-content">
+                    <h4>LECHON BELLY</h4>
+                    <p>₱1800 - 3 kls</p>
+                    <p>₱2700 - 5 kls</p>
+                    <p>₱3200 - 6 kls</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="lechon-bakahaha.jpg" alt="Lechon Baka">
+                <div class="card-content">
+                    <h4>OTHER LECHON OPTIONS</h4>
+                    <p>Lechon Baka - no data yet</p>
+                    <p>Lechon Kanding - no data yet</p>
+                    <p>Lechon Pabo - no data yet</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Information & Business Hours</h2>
+        <div class="contact-info">
+            <div>
+                <h3>Contact Number</h3>
+                <p>+63 912 345 6789</p>
+            </div>
+            <div>
+                <h3>Business Hours</h3>
+                <p>Monday - Sunday: 10:00 AM - 10:00 PM</p>
+            </div>
+            <div>
+                <h3>How to Reach Us</h3>
+                <p>NICE KA LOY</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
